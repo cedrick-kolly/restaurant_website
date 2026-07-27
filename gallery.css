@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+header{
+    width: 100%;
+    height: 100px;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+}
+.logo{
+    width: 370px;
+    height: 40px;
+    margin: 30px;
+    border-radius: 15px;
+    color: rgb(18, 41, 87);
+}
+.links{
+    display: flex;
+    padding: 40px;
+}
+.links li{
+    list-style: none;
+    font-size: larger;
+}
+.links a{
+    text-decoration: none;
+    color: rgb(18, 41, 87);
+    padding: 15px 20px;
+    position: relative;
+}
+.links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(18, 41, 87);
+}
+.links a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.space{
+    height: 100%;
+    width: 250px;
+}
+.images{
+    width: 140px;
+    height: 60px;
+    display: flex;
+    padding-top: 15px;
+}
+.img1{
+    width: 70px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.img2{
+    width: 70px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.btn{
+    width: 130px;
+    height: 30px;
+    background-color: rgb(18, 41, 87);
+    margin: 30px 20px;
+    border-radius: 15px;
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(8, 20, 42);
+}
