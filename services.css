@@ -94,10 +94,9 @@ header{
     padding-top: 15px;
 }
 .b{
-    height: 500px;
-    width: 100%;
-    display: flex;
-    padding: 20px 50px;
+    width: 95%;
+    height: 600px;
+    padding: 20px 35px;
 }
 .b1{
     height: 90%;
@@ -105,10 +104,16 @@ header{
     background-color: orange;
     float: left;
 }
+.b1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .b2{
     height: 90%;
     width: 45%;
-    background-color: aqua;
+    background-color: white;
+    color: rgb(18, 41, 87);
     float: right;
 }
 .b2 h2{
@@ -120,19 +125,29 @@ header{
     text-align: center;
 }
 .b2 a{
-    margin: 20px 270px;
+    margin: 20px 250px;
     text-decoration: none;
-    background-color: white;
+    background-color: rgb(18, 41, 87);
+    color: white;
     border-radius: 15px;
     padding: 10px;
+}
+.b2 a:hover{
+    background-color: rgb(8, 20, 42);
+}
+.c{
+    width: 95%;
+    height: 600px;
+    padding: 20px 35px;
 }
 .c1{
     height: 90%;
     width: 45%;
-    background-color: aqua;
+    background-color: white;
+    color: rgb(18, 41, 87);
     float: left;
 }
-/*.c1 h2{
+.c1 h2{
     text-align: center;
     padding: 40px 60px;
 }
@@ -140,18 +155,46 @@ header{
     padding: 40px 20px;
     text-align: center;
 }
-.c1 a{
-    margin: 20px 270px;
-    text-decoration: none;
-    background-color: white;
-    border-radius: 15px;
-    padding: 10px;
-}*/
 .c2{
     height: 90%;
     width: 45%;
-    background-color: orange;
     float: right;
+}
+.c2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.d{
+    width: 95%;
+    height: 600px;
+    padding: 20px 35px;
+}
+.d1{
+    height: 90%;
+    width: 45%;
+    background-color: orange;
+    float: left;
+}
+.d1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.d2{
+    height: 90%;
+    width: 45%;
+    background-color: white;
+    color: rgb(18, 41, 87);
+    float: right;
+}
+.d2 h2{
+    text-align: center;
+    padding: 40px 60px;
+}
+.d2 p{
+    padding: 40px 20px;
+    text-align: center;
 }
 .e{
     width: 100%;
@@ -196,11 +239,11 @@ header{
 }
 .p1{
     padding-top: 80px;
-    padding-left: 10px;
+    padding-left: 100px;
     padding-bottom: 10px;
 }
 .p2{
-    padding-left: 10px;
+    padding-left: 100px;
     padding-bottom: 20px;
 }
 .e4 a{
@@ -209,7 +252,7 @@ header{
     background-color: rgb(18, 41, 87);
     padding: 10px;
     border-radius: 20px;
-    margin: 0 100px;
+    margin: 0 120px;
 }
 .e4 a:hover{
     background-color: rgb(8, 20, 42);
