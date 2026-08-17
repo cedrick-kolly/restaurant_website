@@ -1,336 +1,1200 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     background-color: rgb(255, 255, 255);
 }
-header{
+
+/* =========================
+   HEADER
+========================= */
+
+header {
     width: 100%;
-    height: 100px;
+    min-height: 100px;
 }
-.navbar{
+
+.navbar {
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     background-color: white;
+
     display: flex;
+    align-items: center;
+
+    /* Allows the navigation to shrink instead of overflowing */
+    flex-wrap: wrap;
 }
-.logo{
+
+.logo {
     width: 370px;
+    min-width: 0;
     height: 40px;
     margin: 30px;
+
     border-radius: 15px;
     color: rgb(18, 41, 87);
+
+    flex-shrink: 1;
 }
-.links{
+
+.logo h1 {
+    white-space: nowrap;
+    font-size: clamp(22px, 2.5vw, 32px);
+}
+
+.links {
     display: flex;
-    padding: 40px;
+    flex-wrap: wrap;
+
+    padding: 40px 10px;
+
+    flex-shrink: 1;
 }
-.links li{
+
+.links li {
     list-style: none;
     font-size: larger;
 }
-.links a{
+
+.links a {
     text-decoration: none;
     color: rgb(18, 41, 87);
-    padding: 15px 20px;
+
+    padding: 15px 15px;
+
     position: relative;
+    display: block;
 }
-.links a::after{
+
+.links a::after {
     content: "";
+
     position: absolute;
     left: 0;
     bottom: -2px;
+
     width: 0;
     height: 2px;
+
     background-color: rgb(18, 41, 87);
 }
-.links a:hover::after{
+
+.links a:hover::after {
     width: 100%;
     transition: 0.5s;
 }
-.space{
+
+.space {
     height: 100%;
-    width: 250px;
+    flex: 1;
+    min-width: 10px;
 }
-.images{
+
+.images {
     width: 140px;
     height: 60px;
+
     display: flex;
+
     padding-top: 15px;
+
+    flex-shrink: 0;
 }
-.img1{
-    width: 70px;
+
+.img1,
+.img2 {
+    width: 50px;
     height: 50px;
+
     border-radius: 5px;
     margin: 10px;
 }
-.img2{
-    width: 70px;
-    height: 50px;
-    border-radius: 5px;
-    margin: 10px;
-}
-.btn{
+
+.btn {
     width: 130px;
+    min-width: 120px;
     height: 30px;
+
     background-color: rgb(18, 41, 87);
+
     margin: 30px 20px;
+
     border-radius: 15px;
     color: white;
+    border: none;
+
+    flex-shrink: 0;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(8, 20, 42);
 }
-.back{
+
+
+/* =========================
+   HERO / BACK
+========================= */
+
+.back {
     width: 100%;
-    height: 500px;
-    background-image: url(../IMAGES/restaurant.jpg);
+    min-height: 500px;
+
+    background-image: url(./IMAGES/restaurant.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+
     text-align: center;
     color: white;
-}
-.back h4{
-    padding-top: 50px;
-    color: rgb(18, 41, 87);
-}
-.back h1{
-    padding: 20px;
-    padding-top: 0;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
 }
-.back p{
-    padding: 10px 100px;
-    padding-bottom: 50px;
-    /*color: rgb(18, 41, 87);*/
+
+.back h4 {
+    color: rgb(18, 41, 87);
+    font-size: clamp(16px, 2vw, 22px);
+    line-height: 1.4;
 }
-.back a{
+
+.back h1 {
+    padding: 20px 0;
+
+    max-width: 1100px;
+
+    font-size: clamp(30px, 5vw, 55px);
+    line-height: 1.2;
+}
+
+.back p {
+    padding: 10px 20px 50px;
+    max-width: 900px;
+    line-height: 1.7;
+    font-size: clamp(16px, 1.6vw, 19px);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+.back p:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.1s;
+}
+
+.back a {
     background-color: rgb(18, 41, 87);
-    padding: 10px;
+
+    padding: 10px 20px;
+
     border-radius: 20px;
+
     text-decoration: none;
     color: white;
+
+    transition: background-color 0.3s ease;
 }
-.back a:hover{
+
+.back a:hover {
     background-color: rgb(8, 20, 42);
 }
-.texty{
+
+
+/* =========================
+   TEXTY
+========================= */
+
+.texty {
     width: 60%;
     height: 50%;
+
     position: fixed;
 }
-.a{
-    width: 95%;
-    height: 600px;
+
+
+/* =========================
+   SECTION A
+========================= */
+
+.a {
+    width: 100%;
+    min-height: 600px;
+
     padding: 20px 35px;
+
+    display: flex;
 }
-.a1{
+
+.a1 {
     width: 50%;
-    height: 100%;
-    float: left;
+    min-height: 560px;
+
     background-color: white;
-    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow-wrap: break-word;
 }
-.a1 h2{
-    padding: 60px 10px;
+
+.a1 h2 {
+    padding: 30px 10px;
+
     text-align: center;
+
     color: rgb(18, 41, 87);
+
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.3;
 }
-.a1 p{
+
+.a1 p {
     padding: 20px;
+
     color: rgb(18, 41, 87);
+
+    line-height: 1.7;
 }
-.a1-1{
+
+.a1-1 {
     text-align: center;
+
     margin-top: 20px;
     padding: 30px;
-
 }
-.aa{
+
+.aa,
+.bb {
     text-decoration: none;
+
+    padding: 15px 20px;
+
+    border-radius: 30px;
+
+    margin: 5px 15px;
+
+    display: inline-block;
+
+    transition: background-color 0.3s ease;
+}
+
+.aa {
     color: rgb(202, 201, 201);
     background-color: rgb(18, 41, 87);
-    padding: 15px;
-    border-radius: 30px;
-    margin: 0 30px;
 }
-.aa:hover{
+
+.aa:hover {
     background-color: rgb(8, 20, 42);
 }
-.bb{
-    text-decoration: none;
+
+.bb {
     color: rgb(18, 41, 87);
     background-color: rgb(231, 231, 231);
-    padding: 15px;
-    border-radius: 30px;
-    margin: 0 30px;
 }
-.bb:hover{
+
+.bb:hover {
     background-color: rgb(107, 107, 107);
 }
-.a2{
+
+.a2 {
     width: 50%;
-    height: 100%;
-    float: right;
+    min-height: 560px;
+
     background-color: rgb(202, 201, 201);
 }
-.a2 img{
+
+.a2 img {
     width: 100%;
     height: 100%;
+    min-height: 560px;
+
     object-fit: cover;
+
+    display: block;
 }
-.b{
-    width: 95%;
-    height: 600px;
+
+
+/* =========================
+   SECTION B
+========================= */
+
+.b {
+    width: 100%;
+    min-height: 600px;
+
     padding: 15px 35px;
+
+    display: flex;
 }
-.b1{
+
+.b1 {
     width: 50%;
-    height: 100%;
-    float: left;
+    min-height: 570px;
+
     background-color: rgb(18, 41, 87);
 }
-.b1 img{
+
+.b1 img {
     object-fit: cover;
+
     width: 100%;
     height: 100%;
+    min-height: 570px;
+
+    display: block;
 }
-.b2{
+
+.b2 {
     width: 50%;
-    height: 100%;
-    float: right;
+    min-height: 570px;
+
     background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow-wrap: break-word;
 }
-.b2 h2{
+
+.b2 h2 {
     padding: 40px 10px;
+
     text-align: center;
+
     color: rgb(18, 41, 87);
+
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.3;
 }
-.b2 p{
+
+.b2 p {
     padding: 20px;
+
     color: rgb(18, 41, 87);
+
+    line-height: 1.7;
 }
-.b2-1{
+
+.b2-1 {
     text-align: center;
+
     margin-top: 20px;
     padding: 30px;
 }
-.ba{
+
+.ba,
+.ad {
     text-decoration: none;
+
+    padding: 15px 20px;
+
+    border-radius: 30px;
+
+    margin: 5px 15px;
+
+    display: inline-block;
+
+    transition: background-color 0.3s ease;
+}
+
+.ba {
     color: white;
     background-color: rgb(18, 41, 87);
-    padding: 15px;
-    border-radius: 30px;
-    margin: 0 30px;
 }
-.ba:hover{
+
+.ba:hover {
     background-color: rgb(8, 20, 42);
 }
-.ad{
-   text-decoration: none;
+
+.ad {
     color: rgb(18, 41, 87);
     background-color: rgb(231, 231, 231);
-    padding: 15px;
-    border-radius: 30px;
-    margin: 0 30px; 
 }
-.ad:hover{
+
+.ad:hover {
     background-color: rgb(107, 107, 107);
 }
-.c{
+
+
+/* =========================
+   SECTION C
+========================= */
+
+.c {
     width: 100%;
-    height: 500px;
-    background-image: url(../IMAGES/caption.jpg);
+    min-height: 500px;
+
+    background-image: url(./IMAGES/caption.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
 }
-.c h1{
-    padding: 30px 450px;
-    padding-top: 150px;
+
+.c h1 {
+    padding: 0;
+
+    width: 100%;
+    max-width: 900px;
+
     color: white;
 
+    font-size: clamp(28px, 4vw, 50px);
+    line-height: 1.3;
 }
-.c a{
-     text-decoration: none;
+
+.c a {
+    text-decoration: none;
+
     color: white;
     background-color: rgb(18, 41, 87);
-    padding: 10px;
+
+    padding: 10px 20px;
+
     border-radius: 20px;
-    margin: 0 50px;
+
+    margin: 30px 15px 0;
+
+    display: inline-block;
+
+    transition: background-color 0.3s ease;
 }
-.c a:hover{
+
+.c a:hover {
     background-color: rgb(8, 20, 42);
 }
-.d{
+
+
+/* =========================
+   FOOTER / SECTION D
+========================= */
+
+.d {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
+
     display: flex;
+    flex-wrap: wrap;
+
     color: rgb(18, 41, 87);
 }
-.d1{
-    width: 25%;
-    height: 100%;
+
+.d1,
+.d2,
+.d3,
+.d4 {
+    min-height: 300px;
     background-color: white;
 }
-.d1 h3{
+
+/*
+   Your HTML uses .d2-1 as the third footer column
+   instead of .d3. This selector handles it without
+   changing your HTML structure.
+*/
+
+.d1 {
+    width: 25%;
+}
+
+.d1 h3 {
     padding: 70px;
     padding-top: 5px;
+
     font-size: 20px;
 }
-.d1 p{
+
+.d1 p {
     padding-top: 100px;
     padding-left: 70px;
 }
-.d2{
+
+.d2 {
     width: 15%;
-    height: 100%;
-    background-color: white;
 }
-.d2-1{
+
+.d2-1 {
     padding: 80px 10px;
 }
-.d3{
+
+/* Third footer column in your existing HTML */
+.d > .d2-1 {
     width: 35%;
-    height: 100%;
-    background-color: white;
 }
-.d3 p{
+
+.d3 {
+    width: 35%;
+}
+
+.d3 p {
     padding: 80px 10px;
+    line-height: 1.7;
 }
-.d4{
+
+.d4 {
     width: 25%;
-    height: 100%;
-    background-color: white;
 }
-.p1{
+
+.p1 {
     padding-top: 80px;
     padding-left: 100px;
     padding-bottom: 10px;
 }
-.p2{
+
+.p2 {
     padding-left: 100px;
     padding-bottom: 20px;
 }
-.d4 a{
+
+.d4 a {
     text-decoration: none;
+
     color: white;
     background-color: rgb(18, 41, 87);
-    padding: 10px;
+
+    padding: 10px 20px;
+
     border-radius: 20px;
-    margin: 0 120px;
+
+    margin-left: 100px;
+
+    display: inline-block;
 }
-.d4 a:hover{
+
+.d4 a:hover {
     background-color: rgb(8, 20, 42);
 }
-.e{
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.e {
     width: 100%;
-    height: 20px;
+    min-height: 40px;
+
     background-color: white;
     color: rgb(18, 41, 87);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.e p{
+
+.e p {
     text-align: center;
+    padding: 10px;
+}
+
+
+/* =====================================================
+   LARGE TABLET / SMALL LAPTOP
+===================================================== */
+
+@media screen and (max-width: 1100px) {
+
+    /* HEADER */
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 260px;
+        margin: 20px;
+    }
+
+    .links {
+        padding: 20px 5px;
+    }
+
+    .links a {
+        padding: 12px 10px;
+    }
+
+    .space {
+        display: none;
+    }
+
+    .images {
+        display: none;
+    }
+
+    .btn {
+        margin: 20px;
+    }
+
+
+    /* CONTENT */
+
+    .a,
+    .b {
+        padding: 20px;
+    }
+
+
+    /* FOOTER */
+
+    .d1 h3 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .d1 p {
+        padding-left: 30px;
+    }
+
+    .p1,
+    .p2 {
+        padding-left: 40px;
+    }
+
+    .d4 a {
+        margin-left: 40px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media screen and (max-width: 850px) {
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+        min-height: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 10px 15px;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+
+        margin: 15px auto;
+
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .links {
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 10px;
+
+        gap: 5px;
+    }
+
+    .links a {
+        padding: 10px 12px;
+    }
+
+    .btn {
+        margin: 10px auto 20px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .back {
+        min-height: 450px;
+    }
+
+
+    /* =========================
+       SECTION A
+    ========================= */
+
+    .a {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .a1,
+    .a2 {
+        width: 100%;
+    }
+
+    .a1 {
+        min-height: 420px;
+    }
+
+    .a2 {
+        min-height: 400px;
+    }
+
+    .a2 img {
+        min-height: 400px;
+    }
+
+
+    /* =========================
+       SECTION B
+    ========================= */
+
+    .b {
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .b1,
+    .b2 {
+        width: 100%;
+    }
+
+    .b1 {
+        min-height: 400px;
+    }
+
+    .b1 img {
+        min-height: 400px;
+    }
+
+    .b2 {
+        min-height: 420px;
+    }
+
+
+    /* =========================
+       SECTION C
+    ========================= */
+
+    .c {
+        min-height: 450px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .d1,
+    .d2,
+    .d > .d2-1,
+    .d4 {
+        width: 50%;
+        min-height: 250px;
+    }
+
+    .d1 h3 {
+        padding: 40px 30px 10px;
+    }
+
+    .d1 p {
+        padding: 40px 30px;
+    }
+
+    .d2-1,
+    .d3 p {
+        padding: 40px 30px;
+    }
+
+    .p1,
+    .p2 {
+        padding-left: 30px;
+    }
+
+    .d4 a {
+        margin-left: 30px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .navbar {
+        width: 100%;
+
+        padding: 10px;
+    }
+
+    .logo {
+        width: 100%;
+
+        margin: 10px auto 15px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+
+        white-space: normal;
+    }
+
+    .links {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 3px;
+
+        padding: 5px;
+    }
+
+    .links li {
+        font-size: 16px;
+    }
+
+    .links a {
+        padding: 8px 15px;
+    }
+
+    .btn {
+        width: 140px;
+
+        margin: 15px auto;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .back {
+        min-height: 450px;
+
+        padding: 30px 15px;
+    }
+
+    .back h4 {
+        font-size: 15px;
+    }
+
+    .back h1 {
+        font-size: 32px;
+
+        padding: 15px 0;
+
+        line-height: 1.25;
+    }
+
+    .back p {
+        padding: 10px 5px 35px;
+
+        line-height: 1.6;
+
+        font-size: 14px;
+    }
+
+    .back a {
+        max-width: 90%;
+
+        padding: 10px 15px;
+    }
+
+
+    /* =========================
+       SECTION A
+    ========================= */
+
+    .a {
+        width: 100%;
+
+        padding: 0;
+
+        min-height: auto;
+    }
+
+    .a1,
+    .a2 {
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .a1 {
+        padding: 30px 15px;
+    }
+
+    .a1 h2 {
+        padding: 20px 5px;
+
+        font-size: 26px;
+    }
+
+    .a1 p {
+        padding: 15px 5px;
+
+        text-align: center;
+
+        line-height: 1.7;
+    }
+
+    .a1-1 {
+        padding: 20px 5px;
+    }
+
+    .aa,
+    .bb {
+        margin: 5px;
+
+        max-width: 100%;
+    }
+
+    .a2 {
+        height: 350px;
+    }
+
+    .a2 img {
+        width: 100%;
+        height: 350px;
+
+        min-height: 0;
+    }
+
+
+    /* =========================
+       SECTION B
+    ========================= */
+
+    .b {
+        width: 100%;
+
+        padding: 0;
+
+        min-height: auto;
+
+        flex-direction: column;
+    }
+
+    .b1,
+    .b2 {
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .b1 {
+        height: 350px;
+    }
+
+    .b1 img {
+        width: 100%;
+        height: 350px;
+
+        min-height: 0;
+    }
+
+    .b2 {
+        padding: 30px 15px;
+    }
+
+    .b2 h2 {
+        padding: 20px 5px;
+
+        font-size: 26px;
+    }
+
+    .b2 p {
+        padding: 15px 5px;
+
+        text-align: center;
+
+        line-height: 1.7;
+    }
+
+    .b2-1 {
+        padding: 20px 5px;
+    }
+
+    .ba,
+    .ad {
+        margin: 5px;
+
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       SECTION C
+    ========================= */
+
+    .c {
+        min-height: 400px;
+
+        padding: 30px 15px;
+    }
+
+    .c h1 {
+        width: 100%;
+        /* color: #D4AF37; */
+        font-size: 30px;
+    }
+
+    .c a {
+        margin: 25px 5px 0;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .d {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+    .d1,
+    .d2,
+    .d > .d2-1,
+    .d4 {
+        width: 100%;
+
+        min-height: auto;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    .d1 h3 {
+        padding: 10px;
+    }
+
+    .d1 p {
+        padding: 20px 10px;
+    }
+
+    .d2-1 {
+        padding: 20px 10px;
+    }
+
+    .d3 p {
+        padding: 20px 10px;
+    }
+
+    .p1,
+    .p2 {
+        padding: 10px;
+    }
+
+    .d4 a {
+        margin: 10px auto;
+    }
+
+
+    /* =========================
+       COPYRIGHT
+    ========================= */
+
+    .e {
+        min-height: 50px;
+    }
+
+    .e p {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media screen and (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .links a {
+        font-size: 14px;
+
+        padding: 7px 10px;
+    }
+
+    .back {
+        min-height: 430px;
+
+        padding: 25px 12px;
+    }
+
+    .back h4 {
+        font-size: 14px;
+    }
+
+    .back h1 {
+        font-size: 27px;
+    }
+
+    .back p {
+        font-size: 13px;
+    }
+
+    .a1 h2,
+    .b2 h2 {
+        font-size: 24px;
+    }
+
+    .c h1 {
+        font-size: 25px;
+    }
+
+    .aa,
+    .bb,
+    .ba,
+    .ad {
+        padding: 12px 15px;
+
+        font-size: 14px;
+    }
+
+    .e p {
+        font-size: 12px;
+    }
 }

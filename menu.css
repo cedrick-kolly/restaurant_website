@@ -1,43 +1,69 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     background-color: rgb(255, 255, 255);
 }
-header{
+
+/* =========================
+   HEADER
+========================= */
+
+header {
     width: 100%;
     height: 100px;
 }
-.navbar{
+
+.navbar {
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     background-color: white;
     display: flex;
+    align-items: center;
 }
-.logo{
+
+.logo {
     width: 370px;
+    min-width: 250px;
     height: 40px;
     margin: 30px;
     border-radius: 15px;
     color: rgb(18, 41, 87);
 }
-.links{
+
+.logo h1 {
+    white-space: nowrap;
+}
+
+.links {
     display: flex;
     padding: 40px;
+    flex-shrink: 0;
 }
-.links li{
+
+.links li {
     list-style: none;
     font-size: larger;
 }
-.links a{
+
+.links a {
     text-decoration: none;
     color: rgb(18, 41, 87);
     padding: 15px 20px;
     position: relative;
 }
-.links a::after{
+
+.links a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -46,292 +72,909 @@ header{
     height: 2px;
     background-color: rgb(18, 41, 87);
 }
-.links a:hover::after{
+
+.links a:hover::after {
     width: 100%;
     transition: 0.5s;
 }
-.space{
+
+.space {
     height: 100%;
-    width: 250px;
+    flex: 1;
+    min-width: 20px;
 }
-.images{
+
+.images {
     width: 140px;
     height: 60px;
     display: flex;
     padding-top: 15px;
+    flex-shrink: 0;
 }
-.img1{
+
+.img1,
+.img2 {
     width: 70px;
     height: 50px;
     border-radius: 5px;
     margin: 10px;
 }
-.img2{
-    width: 70px;
-    height: 50px;
-    border-radius: 5px;
-    margin: 10px;
-}
-.btn{
+
+.btn {
     width: 130px;
     height: 30px;
     background-color: rgb(18, 41, 87);
     margin: 30px 20px;
     border-radius: 15px;
     color: white;
+    border: none;
+    flex-shrink: 0;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(8, 20, 42);
 }
-/* end of the header section */
 
-.div{
+
+/* =========================
+   MENU HERO
+========================= */
+
+.div {
     width: 100%;
-    height: 100%;
 }
-    /* menu image */
-.menu-img{
+
+.menu-img {
     width: 100%;
-    height: 600px;
+    min-height: 600px;
     background-color: burlywood;
     margin-bottom: 20px;
+    display: flex;
     justify-content: center;
-    background-image: url(../IMAGES/images\ \(7\).jfif);       
+    align-items: center;
+    background-image: url(./IMAGES/images\ \(7\).jfif);
     background-position: center;
     background-size: cover;
     color: white;
 }
-.menu-img h1{
-    padding: 200px 600px;
+
+.menu-img h1 {
+    padding: 0;
     font-size: 100px;
     font-family: 'Times New Roman', Times, serif;
 }
-    /* menu links */
-.menu-link{
+
+
+/* =========================
+   MENU LINKS
+========================= */
+
+.menu-link {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
 }
-.menu-link li{
+
+.menu-link li {
     list-style: none;
     padding: 10px;
 }
-.menu-link a{
+
+.menu-link a {
     text-decoration: none;
     color: white;
     background-color: rgb(18, 41, 87);
     padding: 10px;
     border-radius: 10px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;       
+    font-size: 30px;
 }
-.menu-link a:hover{
+
+.menu-link a:hover {
     background-color: rgb(8, 20, 42);
 }
-    /* breakfast list */
-.known{
+
+
+/* =========================
+   BREAKFAST
+========================= */
+
+.known {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
 }
-.known h1{
+
+.known h1 {
     text-align: center;
     margin: 20px 0;
     color: rgb(18, 41, 87);
 }
 
-.brk-img{
+.brk-img {
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
 }
-.a1{
-    width: 100%;
-    height: 100%;
+
+.a1 {
+    width: 25%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
 }
-.a1-1{
+
+.a1-1 {
     width: 300px;
-    height: 90%;
+    max-width: 100%;
+    min-height: 90%;
+    height: auto;
     background-color: rgb(243, 243, 243);
     color: rgb(18, 41, 87);
     border-radius: 20px;
-    margin: 20px 40px;
-    padding-top: 5px;
+    margin: 20px;
+    padding: 5px 10px 20px;
 }
-.a1-2{
+
+.a1-2 {
     width: 200px;
     height: 200px;
+    max-width: 100%;
     border-radius: 300px;
-    margin: 10px 55px;
+    margin: 10px auto;
     background-color: white;
 }
-.a1-2 img{
+
+.a1-2 img {
     width: 100%;
     height: 100%;
     border-radius: 300px;
     object-fit: cover;
 }
-.a1-1 h5{
+
+.a1-1 h5 {
     text-align: center;
     font-size: 20px;
 }
-.a1-1 p{
+
+.a1-1 p {
     text-align: center;
 }
-.div2{
+
+
+/* =========================
+   DRINKS SECTION
+========================= */
+
+.div2 {
     width: 100%;
-    height: 450px;
+    min-height: 450px;
+    height: auto;
     display: flex;
 }
-.div2 img{
+
+.div2 > img {
     width: 40%;
-    height: 100%;
+    min-height: 450px;
+    height: auto;
     object-fit: cover;
 }
-.b0{
-    width: 70%;
-    height: 100%;
+
+.b0 {
+    width: 60%;
+    min-height: 450px;
     background-color: rgb(243, 243, 243);
     color: rgb(18, 41, 87);
 }
-.b0 h3{
+
+.b0 h3 {
     text-align: center;
 }
-.b1{
+
+.b1 {
     width: 100%;
-    height: 50%;
+    min-height: 50%;
+    height: auto;
     display: flex;
 }
-.b2{
+
+.b2 {
     width: 50%;
     height: 100%;
-    padding: 5px 80px;
+    padding: 5px 40px;
 }
-.b2 h4{
+
+.b2 h4 {
     padding: 10px;
     text-align: center;
 }
-.b3{
-    width: 90%;
-    height: 50%;
-    padding-left: 70px;
+
+.b2 ul {
+    padding-left: 20px;
+}
+
+.b2 li {
+    margin-bottom: 5px;
+}
+
+.b3 {
+    width: 100%;
+    min-height: 50%;
+    height: auto;
+    padding: 20px 40px;
     font-size: 25px;
 }
-.c{
-    width: 100%;
-    height: 860px;
-    /* background-color: blue; */
-    margin-top: 20px 0;
+
+.b3 li {
+    list-style-position: inside;
+    margin-bottom: 5px;
 }
-.c h1{
+
+
+/* =========================
+   DINNER
+========================= */
+
+.c {
+    width: 100%;
+    min-height: 860px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.c > h1 {
     text-align: center;
     padding: 20px;
     color: rgb(18, 41, 87);
 }
-.div3{
+
+.div3 {
     width: 100%;
-    height: 100%;
+    min-height: 800px;
+    height: auto;
     display: flex;
 }
-.c1{
+
+.c1 {
     width: 70%;
-    height: 100%;
     background-color: rgb(243, 243, 243);
+    padding-bottom: 20px;
 }
-.c1 ul{
-    padding: 0 10px;
+
+.c1 ul {
+    padding: 0 20px;
     color: rgb(18, 41, 87);
 }
-.c1 h6{
+
+.c1 h6 {
     font-size: 20px;
     color: rgb(18, 41, 87);
-    width: 50%;
+    width: 100%;
 }
-.c1 li{
+
+.c1 li {
     padding: 5px;
+    line-height: 1.4;
 }
-.c2{
+
+.c2 {
     width: 30%;
-    height: 100%;
+    min-height: 800px;
     background-color: aqua;
 }
-.c2 img{
+
+.c2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-} 
+}
 
 
+/* =========================
+   FOOTER
+========================= */
 
-/* footer section */
-.d{
+.d {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
     display: flex;
     color: rgb(18, 41, 87);
     background-color: brown;
 }
-.d1{
+
+.d1 {
     width: 25%;
-    height: 100%;
+    min-height: 300px;
     background-color: white;
 }
- .d1 h3{
+
+.d1 h3 {
     padding: 70px;
     padding-top: 5px;
     font-size: 20px;
-} 
-.d1 p{
+}
+
+.d1 p {
     padding-top: 100px;
     padding-left: 70px;
 }
-.d2{
+
+.d2 {
     width: 15%;
-    height: 100%;
+    min-height: 300px;
     background-color: white;
 }
-.d2-1{
+
+.d2-1 {
     padding: 80px 10px;
-} 
-.d3{
+}
+
+.d3 {
     width: 35%;
-    height: 100%;
+    min-height: 300px;
     background-color: white;
     padding: 80px 10px;
 }
-.d4{
+
+.d4 {
     width: 25%;
-    height: 100%;
+    min-height: 300px;
     background-color: white;
 }
-.p1{
+
+.p1 {
     padding-top: 80px;
     padding-left: 100px;
     padding-bottom: 10px;
 }
-.p2{
+
+.p2 {
     padding-left: 100px;
     padding-bottom: 20px;
 }
-.d4 a{
+
+.d4 a {
+    display: inline-block;
     text-decoration: none;
     color: white;
     background-color: rgb(18, 41, 87);
     padding: 10px;
     border-radius: 20px;
-    margin: 0 120px;
+    margin-left: 100px;
 }
-.d4 a:hover{
+
+.d4 a:hover {
     background-color: rgb(8, 20, 42);
-} 
-.e{
+}
+
+
+/* =========================
+   BOTTOM FOOTER
+========================= */
+
+.e {
     width: 100%;
-    height: 20px;
+    min-height: 20px;
+    height: auto;
     background-color: white;
     color: rgb(18, 41, 87);
 }
- .e p{
+
+.e p {
     text-align: center;
+    padding: 3px;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media screen and (max-width: 1100px) {
+
+    /* HEADER */
+
+    .logo {
+        width: 280px;
+        margin: 20px;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    .links {
+        padding: 35px 10px;
+    }
+
+    .links a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .images {
+        display: none;
+    }
+
+    .space {
+        display: none;
+    }
+
+    .btn {
+        margin: 30px 10px;
+    }
+
+
+    /* HERO */
+
+    .menu-img {
+        min-height: 500px;
+    }
+
+    .menu-img h1 {
+        font-size: 80px;
+    }
+
+
+    /* BREAKFAST */
+
+    .brk-img {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .a1 {
+        width: 50%;
+    }
+
+    .a1-1 {
+        width: 300px;
+    }
+
+
+    /* DRINKS */
+
+    .b2 {
+        padding: 5px 20px;
+    }
+
+    .b3 {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+
+    /* FOOTER */
+
+    .d1 h3 {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .d1 p {
+        padding-left: 30px;
+    }
+
+    .p1,
+    .p2 {
+        padding-left: 30px;
+    }
+
+    .d4 a {
+        margin-left: 30px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+        height: auto;
+    }
+
+    .navbar {
+        height: auto;
+        min-height: 100px;
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    .links {
+        width: 100%;
+        padding: 10px 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .links li {
+        font-size: 16px;
+    }
+
+    .links a {
+        padding: 8px;
+    }
+
+    .space,
+    .images {
+        display: none;
+    }
+
+    .btn {
+        width: 160px;
+        margin: 10px 0;
+    }
+
+
+    /* =========================
+       MENU HERO
+    ========================= */
+
+    .menu-img {
+        min-height: 350px;
+        margin-bottom: 10px;
+    }
+
+    .menu-img h1 {
+        font-size: 55px;
+    }
+
+
+    /* =========================
+       BREAKFAST
+    ========================= */
+
+    .known {
+        height: auto;
+    }
+
+    .known h1 {
+        font-size: 28px;
+        margin: 25px 0;
+    }
+
+    .brk-img {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .a1 {
+        width: 100%;
+    }
+
+    .a1-1 {
+        width: min(300px, 100%);
+        margin: 10px auto;
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+
+    .a1-2 {
+        width: 180px;
+        height: 180px;
+    }
+
+
+    /* =========================
+       DRINKS
+    ========================= */
+
+    .div2 {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .div2 > img {
+        width: 100%;
+        height: 300px;
+        min-height: 0;
+    }
+
+    .b0 {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .b1 {
+        flex-direction: column;
+    }
+
+    .b2 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .b2 h4 {
+        font-size: 20px;
+    }
+
+    .b2 ul {
+        padding-left: 25px;
+    }
+
+    .b3 {
+        width: 100%;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       DINNER
+    ========================= */
+
+    .c {
+        min-height: auto;
+    }
+
+    .c > h1 {
+        font-size: 28px;
+        padding: 25px 10px;
+    }
+
+    .div3 {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .c1 {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .c1 ul {
+        padding: 0 15px 20px;
+    }
+
+    .c1 h6 {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .c1 li {
+        font-size: 14px;
+        padding: 8px 3px;
+    }
+
+    .c2 {
+        width: 100%;
+        height: 350px;
+        min-height: 0;
+    }
+
+    .c2 img {
+        width: 100%;
+        height: 350px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .d {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .d1,
+    .d2,
+    .d3,
+    .d4 {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .d1 {
+        padding: 30px 20px;
+    }
+
+    .d1 p {
+        padding: 0 0 20px;
+    }
+
+    .d1 h3 {
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .d2 {
+        padding: 10px;
+    }
+
+    .d2-1 {
+        padding: 20px;
+    }
+
+    .d3 {
+        padding: 20px;
+    }
+
+    .d4 {
+        padding: 20px;
+    }
+
+    .p1,
+    .p2 {
+        padding: 0;
+    }
+
+    .p1 {
+        margin-bottom: 15px;
+    }
+
+    .p2 {
+        margin-bottom: 20px;
+    }
+
+    .d4 a {
+        margin: 0;
+        display: inline-block;
+    }
+
+
+    /* =========================
+       BOTTOM FOOTER
+    ========================= */
+
+    .e {
+        padding: 5px 10px;
+    }
+
+    .e p {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media screen and (max-width: 480px) {
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .links {
+        gap: 2px;
+    }
+
+    .links li {
+        font-size: 14px;
+    }
+
+    .links a {
+        padding: 6px;
+    }
+
+    .btn {
+        width: 150px;
+        height: 32px;
+        margin: 8px 0;
+    }
+
+
+    /* HERO */
+
+    .menu-img {
+        min-height: 280px;
+    }
+
+    .menu-img h1 {
+        font-size: 42px;
+    }
+
+
+    /* BREAKFAST */
+
+    .known h1 {
+        font-size: 24px;
+    }
+
+    .a1-2 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .a1-1 h5 {
+        font-size: 18px;
+    }
+
+    .a1-1 p {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+
+    /* DRINKS */
+
+    .div2 > img {
+        height: 250px;
+    }
+
+    .b2 {
+        padding: 15px;
+    }
+
+    .b2 li {
+        font-size: 14px;
+    }
+
+    .b3 {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+
+    /* DINNER */
+
+    .c > h1 {
+        font-size: 24px;
+    }
+
+    .c1 h6 {
+        font-size: 16px;
+    }
+
+    .c1 li {
+        font-size: 13px;
+    }
+
+    .c2,
+    .c2 img {
+        height: 280px;
+    }
+
+
+    /* FOOTER */
+
+    .d1 h3 {
+        font-size: 16px;
+    }
+
+    .d3 h5 {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .p2 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .e p {
+        font-size: 10px;
+    }
 }
