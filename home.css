@@ -5,17 +5,19 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    background-color: #FAF7F0;
+}
+
 html,
 body {
     width: 100%;
-    max-width: 100%;
     overflow-x: hidden;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFFFF;
 }
-
 /* =========================
    HEADER
 ========================= */
@@ -28,39 +30,36 @@ header {
 .navbar {
     width: 100%;
     min-height: 100px;
-    background-color: white;
+    background-color: #1F6F5C;
 
     display: flex;
     align-items: center;
-
-    /* Allows the navigation to shrink instead of overflowing */
-    flex-wrap: wrap;
 }
 
 .logo {
     width: 370px;
-    min-width: 0;
+    min-width: 250px;
     height: 40px;
+
     margin: 30px;
-
     border-radius: 15px;
-    color: rgb(18, 41, 87);
 
-    flex-shrink: 1;
+    color: #FFFFFF;
 }
 
 .logo h1 {
     white-space: nowrap;
-    font-size: clamp(22px, 2.5vw, 32px);
 }
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .links {
     display: flex;
-    flex-wrap: wrap;
-
-    padding: 40px 10px;
-
-    flex-shrink: 1;
+    padding: 40px;
+    flex-shrink: 0;
 }
 
 .links li {
@@ -70,25 +69,25 @@ header {
 
 .links a {
     text-decoration: none;
-    color: rgb(18, 41, 87);
+    color: #FFFFFF;
 
-    padding: 15px 15px;
+    padding: 15px 20px;
 
     position: relative;
-    display: block;
 }
 
 .links a::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: -2px;
 
     width: 0;
     height: 2px;
 
-    background-color: rgb(18, 41, 87);
+    background-color: #B8944D;
 }
 
 .links a:hover::after {
@@ -99,8 +98,13 @@ header {
 .space {
     height: 100%;
     flex: 1;
-    min-width: 10px;
+    min-width: 20px;
 }
+
+
+/* =========================
+   NAVIGATION IMAGES
+========================= */
 
 .images {
     width: 140px;
@@ -115,31 +119,40 @@ header {
 
 .img1,
 .img2 {
-    width: 50px;
+    width: 70px;
     height: 50px;
 
     border-radius: 5px;
+
     margin: 10px;
 }
 
+
+/* =========================
+   NAVIGATION BUTTON
+========================= */
+
 .btn {
     width: 130px;
-    min-width: 120px;
     height: 30px;
 
-    background-color: rgb(18, 41, 87);
+    background-color: white;
 
     margin: 30px 20px;
 
     border-radius: 15px;
-    color: white;
+
+    color: black;
+
     border: none;
 
     flex-shrink: 0;
+
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #D6BD7A;
 }
 
 
@@ -151,13 +164,13 @@ header {
     width: 100%;
     min-height: 500px;
 
-    background-image: url(./IMAGES/restaurant.jpg);
+    background-image: url(./IMAGES/back3.webp );
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     text-align: center;
-    color: white;
+    color: #FFFFFF;
 
     display: flex;
     flex-direction: column;
@@ -168,7 +181,7 @@ header {
 }
 
 .back h4 {
-    color: rgb(18, 41, 87);
+    color: white;
     font-size: clamp(16px, 2vw, 22px);
     line-height: 1.4;
 }
@@ -190,26 +203,19 @@ header {
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 900;
 }
-.back p:hover{
-    color: rgb(255, 0, 0);
-    transition: 0.1s;
-}
 
 .back a {
-    background-color: rgb(18, 41, 87);
-
+    background-color: #1F6F5C;
+    color: #B8944D;
     padding: 10px 20px;
-
     border-radius: 20px;
-
     text-decoration: none;
-    color: white;
-
     transition: background-color 0.3s ease;
 }
 
 .back a:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #D4C08B;
+    color: #144D40;
 }
 
 
@@ -256,7 +262,7 @@ header {
 
     text-align: center;
 
-    color: rgb(18, 41, 87);
+    color: #144D40;
 
     font-size: clamp(24px, 3vw, 36px);
     line-height: 1.3;
@@ -264,9 +270,7 @@ header {
 
 .a1 p {
     padding: 20px;
-
-    color: rgb(18, 41, 87);
-
+    color: #1F6F5C;
     line-height: 1.7;
 }
 
@@ -293,27 +297,27 @@ header {
 }
 
 .aa {
-    color: rgb(202, 201, 201);
-    background-color: rgb(18, 41, 87);
+    color: #B8944D;
+    background-color: #1F6F5C;
 }
 
 .aa:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #144D40;
 }
 
 .bb {
-    color: rgb(18, 41, 87);
-    background-color: rgb(231, 231, 231);
+    color: #1F6F5C;
+    background-color: #D4C08B;
 }
 
 .bb:hover {
-    background-color: rgb(107, 107, 107);
+    background-color: #B8944D;
 }
 
 .a2 {
     width: 50%;
     min-height: 560px;
-
+ border-radius: 50px;
     background-color: rgb(202, 201, 201);
 }
 
@@ -321,12 +325,10 @@ header {
     width: 100%;
     height: 100%;
     min-height: 560px;
-
     object-fit: cover;
-
     display: block;
+    border-radius: 50px;
 }
-
 
 /* =========================
    SECTION B
@@ -344,7 +346,7 @@ header {
 .b1 {
     width: 50%;
     min-height: 570px;
-
+ border-radius: 50px;
     background-color: rgb(18, 41, 87);
 }
 
@@ -354,7 +356,7 @@ header {
     width: 100%;
     height: 100%;
     min-height: 570px;
-
+    border-radius: 50px;
     display: block;
 }
 
@@ -376,7 +378,7 @@ header {
 
     text-align: center;
 
-    color: rgb(18, 41, 87);
+    color: #144D40;
 
     font-size: clamp(24px, 3vw, 36px);
     line-height: 1.3;
@@ -385,7 +387,7 @@ header {
 .b2 p {
     padding: 20px;
 
-    color: rgb(18, 41, 87);
+    color: #144D40;
 
     line-height: 1.7;
 }
@@ -413,21 +415,21 @@ header {
 }
 
 .ba {
-    color: white;
-    background-color: rgb(18, 41, 87);
+    color: #B8944D;
+    background-color: #1F6F5C;
 }
 
 .ba:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #144D40;
 }
 
 .ad {
-    color: rgb(18, 41, 87);
-    background-color: rgb(231, 231, 231);
+    color: #144D40;
+    background-color: #D4C08B;
 }
 
 .ad:hover {
-    background-color: rgb(107, 107, 107);
+    background-color: #B8944D;
 }
 
 
@@ -439,7 +441,7 @@ header {
     width: 100%;
     min-height: 500px;
 
-    background-image: url(./IMAGES/caption.jpg);
+    background-image: url(./IMAGES/back.jfif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -460,7 +462,7 @@ header {
     width: 100%;
     max-width: 900px;
 
-    color: white;
+    color: #144D40;
 
     font-size: clamp(28px, 4vw, 50px);
     line-height: 1.3;
@@ -469,8 +471,8 @@ header {
 .c a {
     text-decoration: none;
 
-    color: white;
-    background-color: rgb(18, 41, 87);
+    color: #1F6F5C;
+    background-color: #D4C08B;
 
     padding: 10px 20px;
 
@@ -484,7 +486,7 @@ header {
 }
 
 .c a:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #B8944D;
 }
 
 
@@ -499,7 +501,7 @@ header {
     display: flex;
     flex-wrap: wrap;
 
-    color: rgb(18, 41, 87);
+    color: #144D40;
 }
 
 .d1,
@@ -572,8 +574,8 @@ header {
 .d4 a {
     text-decoration: none;
 
-    color: white;
-    background-color: rgb(18, 41, 87);
+    color: #144D40;
+    background-color: #D4C08B;
 
     padding: 10px 20px;
 
@@ -585,7 +587,7 @@ header {
 }
 
 .d4 a:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #B8944D;
 }
 
 
@@ -598,7 +600,7 @@ header {
     min-height: 40px;
 
     background-color: white;
-    color: rgb(18, 41, 87);
+    color: #144D40;
 
     display: flex;
     align-items: center;

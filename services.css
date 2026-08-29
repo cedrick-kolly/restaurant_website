@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #FFFF;
     overflow-x: hidden;
 }
 
@@ -22,7 +22,7 @@ header {
 .navbar {
     width: 100%;
     min-height: 100px;
-    background-color: white;
+    background-color: #1F6F5C;
     display: flex;
     align-items: center;
 }
@@ -32,7 +32,7 @@ header {
     height: 40px;
     margin: 30px;
     border-radius: 15px;
-    color: rgb(18, 41, 87);
+    color: #FFFF;
     flex-shrink: 0;
 }
 
@@ -53,11 +53,12 @@ header {
 
 .links a {
     text-decoration: none;
-    color: rgb(18, 41, 87);
+    color: #FFFF;
     padding: 15px 20px;
     position: relative;
     white-space: nowrap;
 }
+
 
 .links a::after {
     content: "";
@@ -66,8 +67,18 @@ header {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: rgb(18, 41, 87);
+    background-color: #B8944D;
 }
+/* :root {
+    --primary: #1F6F5C;
+    --primary-dark: #144D40;
+    --gold: #B8944D;
+    --gold-light: #D6BD7A;
+    --cream: #FAF7F0;
+    --beige: #E8E1D5;
+    --brown: #2C2926;
+    --white: ;
+ } */
 
 .links a:hover::after {
     width: 100%;
@@ -105,15 +116,16 @@ header {
 .btn {
     width: 130px;
     height: 30px;
-    background-color: rgb(18, 41, 87);
+    background-color: #B8944D;
     margin: 30px 20px;
     border-radius: 15px;
-    color: white;
+    color: #1F6F5C;
     flex-shrink: 0;
+    border: 0;
 }
 
 .btn:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #D6BD7A;
 }
 
 /* =========================
@@ -123,8 +135,8 @@ header {
 .a {
     width: 100%;
     min-height: 70px;
-    background-color: rgb(18, 41, 87);
-    color: white;
+    background-color: #FFFF;
+    color: #144D40;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +190,7 @@ header {
 
 .b2 {
     background-color: white;
-    color: rgb(18, 41, 87);
+    color: #144D40;
 }
 
 .b2 h2 {
@@ -197,14 +209,14 @@ header {
     width: fit-content;
     margin: 20px auto;
     text-decoration: none;
-    background-color: rgb(18, 41, 87);
-    color: white;
+    background-color: #B8944D;
+    color: #144D40;
     border-radius: 15px;
     padding: 10px;
 }
 
 .b2 a:hover {
-    background-color: rgb(8, 20, 42);
+    background-color: #D6BD7A;
 }
 
 /* =========================
@@ -213,7 +225,7 @@ header {
 
 .c1 {
     background-color: white;
-    color: rgb(18, 41, 87);
+    color: #144D40;
 }
 
 .c1 h2 {
@@ -226,10 +238,24 @@ header {
     text-align: center;
     line-height: 1.7;
 }
+.c1 a {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-decoration: none;
+    background-color: #B8944D;
+    color: #144D40;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.c1 a:hover {
+    background-color: #D6BD7A;
+}
 
 .c2 img {
     width: 100%;
-    height: 100%;
+    height: 10%;
     min-height: 500px;
     object-fit: cover;
 }
@@ -251,7 +277,7 @@ header {
 
 .d2 {
     background-color: white;
-    color: rgb(18, 41, 87);
+    color: #144D40;
 }
 
 .d2 h2 {
@@ -264,6 +290,20 @@ header {
     text-align: center;
     line-height: 1.7;
 }
+.d2 a {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-decoration: none;
+    background-color: #B8944D;
+    color: #144D40;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.d2 a:hover {
+    background-color: #D6BD7A;
+}
 
 /* =========================
    CONTACT SECTION
@@ -273,75 +313,123 @@ header {
     width: 100%;
     min-height: 300px;
     display: flex;
-    color: rgb(18, 41, 87);
+    flex-wrap: wrap;
+    color: #FFFFFF;
+    background-color: #1F6F5C;
 }
+
+.e1,
+.e2,
+.e3,
+.e4 {
+    min-height: 300px;
+}
+
+
+/* =========================
+   CONTACT INTRO
+========================= */
 
 .e1 {
     width: 25%;
-    min-height: 300px;
-    background-color: white;
 }
 
 .e1 h3 {
     padding: 70px;
     padding-top: 5px;
+
     font-size: 20px;
 }
 
 .e1 p {
     padding-top: 100px;
     padding-left: 70px;
+
+    color: var(--primary);
 }
+
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
 
 .e2 {
     width: 15%;
-    min-height: 300px;
-    background-color: white;
 }
 
 .e2-1 {
     padding: 80px 10px;
 }
 
+.e2-1 h5 {
+    color: var(--brown);
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.e > .e2-1 {
+    width: 35%;
+}
+
 .e3 {
     width: 35%;
-    min-height: 300px;
-    background-color: white;
 }
 
 .e3 p {
     padding: 80px 10px;
+    line-height: 1.7;
 }
+
+
+/* =========================
+   CONTACT TIME
+========================= */
 
 .e4 {
     width: 25%;
-    min-height: 300px;
-    background-color: white;
 }
 
 .p1 {
     padding-top: 80px;
     padding-left: 100px;
     padding-bottom: 10px;
+
+    color: var(--primary);
 }
 
 .p2 {
     padding-left: 100px;
     padding-bottom: 20px;
+
+    line-height: 1.6;
 }
 
+
+/* =========================
+   CONTACT BUTTON
+========================= */
+
 .e4 a {
-    display: inline-block;
     text-decoration: none;
-    color: white;
-    background-color: rgb(18, 41, 87);
-    padding: 10px;
+
+    color: #144D40;
+
+    background-color: #D6BD7A;
+
+    padding: 10px 20px;
+
     border-radius: 20px;
-    margin-left: 120px;
+
+    margin-left: 100px;
+
+    display: inline-block;
 }
 
 .e4 a:hover {
-    background-color: rgb(8, 20, 42);
+    background-color:#B8944D;
 }
 
 /* =========================
@@ -350,14 +438,17 @@ header {
 
 .f {
     width: 100%;
-    min-height: 20px;
-    background-color: white;
-    color: rgb(18, 41, 87);
-    padding: 5px;
+    min-height: 50px;
+    background-color: #1F6F5C;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .f p {
     text-align: center;
+    padding: 10px;
 }
 
 
